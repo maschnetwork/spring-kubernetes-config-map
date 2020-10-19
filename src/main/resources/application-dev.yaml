@@ -1,0 +1,2 @@
+feature-toggle:
+  test: hello from config

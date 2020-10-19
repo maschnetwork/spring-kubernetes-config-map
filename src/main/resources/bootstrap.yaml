@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        mode: event
+        strategy: refresh
+      config:
+        name: my-service-toggles
+---
+spring:
+  profiles: test
+  cloud:
+    kubernetes:
+      config:
+        enabled: false

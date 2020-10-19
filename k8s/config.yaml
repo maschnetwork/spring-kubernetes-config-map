@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "my-service-toggles"
+data:
+  application.yaml: |-
+    feature-toggle:
+      something: true
+      limit: 3000
+      camel-case: false
