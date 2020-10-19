@@ -48,7 +48,7 @@ Include the following libraries in your pom.xml and make sure that you your the 
 </dependencyManagement>
 ```
 
-###Kubernetes Resources
+### Kubernetes Resources
 
 To be able to consume the Kubernetes ConfigMap resources you have to create a proper
 RoleBinding:
@@ -112,7 +112,7 @@ spring:
         enabled: false
 ```
 
-###Spring Configuration
+### Spring Configuration
 
 To access the properties of the ConfigMap you can use a @ConfigurationProperties
 annotation with a prefix to separate it from the rest of your configuration.
@@ -129,7 +129,7 @@ class FeatureToggleConfiguration {
 }
 ```
 
-###Gotchas
+### Gotchas
 
 - Your Spring Cloud configuration needs to be put inside configuration yaml (See Disabling the Spring Cloud Kubernetes Property for the test profile above).
 - For some unknown reasons `mode: event` in bootstrap.yaml doesn't work properly and does not trigger a Configuration change. You can use `mode: polling`
