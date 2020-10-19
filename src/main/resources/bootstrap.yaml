@@ -10,6 +10,7 @@ spring:
         name: my-service-toggles
 ---
 spring:
+  #Disable for Testing
   profiles: test
   cloud:
     kubernetes:
