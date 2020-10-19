@@ -16,5 +16,10 @@ class FeatureToggleController(private val featureToggleConfiguration: FeatureTog
         return featureToggleConfiguration.test
     }
 
+    @GetMapping("/toggles/camel-case")
+    fun getCamelCase(): Boolean {
+        return featureToggleConfiguration.camelCase
+    }
+
 
 }

@@ -5,6 +5,5 @@ metadata:
 data:
   application.yaml: |-
     feature-toggle:
-      something: true
       limit: 3000
       camel-case: false
