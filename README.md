@@ -3,7 +3,7 @@
 This repository integrates with Spring-Cloud-Kubernetes-Config, which allows to change the Spring-Configuration during runtime. It can be therefore
 be used as a simple Feature-Flag mechanism to enable and disable certain features during runtime.
 
-##Overview
+### How to use this repo
 
 This repository contains everything that you need to run the app locally with [minikube](https://minikube.sigs.k8s.io/docs/start/).
 
@@ -13,7 +13,7 @@ After cloning the project just run:
 ./deploy.sh
 ```
 
-##Overview
+## Overview
 
 ### Dependencies
 
