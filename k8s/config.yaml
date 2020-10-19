@@ -6,4 +6,4 @@ data:
   application.yaml: |-
     feature-toggle:
       limit: 3000
-      camel-case: false
+      camel-case: true

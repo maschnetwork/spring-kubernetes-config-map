@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-docker-local
+  name: spring-k8s-config-app
   labels:
     app: spring
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring
+      app: spring-k8s-config-app
   template:
     metadata:
       labels:
-        app: spring
+        app: spring-k8s-config-app
     spec:
       containers:
         - name: spring
@@ -20,7 +20,7 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: "dev"
           imagePullPolicy: IfNotPresent
-          image: spring-docker-local:latest
+          image: spring-k8s-config-app:latest
           ports:
             - containerPort: 8080
 
@@ -30,8 +30,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: spring
-  name: spring-docker-local
+    app: spring-k8s-config-app
+  name: spring-k8s-config-app
   namespace: default
 spec:
   ports:
@@ -39,5 +39,5 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    app: spring
+    app: spring-k8s-config-app
   type: ClusterIP
