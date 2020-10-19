@@ -3,6 +3,7 @@ spring:
     kubernetes:
       reload:
         enabled: true
+        #If this is not working due to some network issues use "polling" instead
         mode: event
         strategy: refresh
       config:
